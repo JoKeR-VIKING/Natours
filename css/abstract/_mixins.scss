@@ -1,0 +1,26 @@
+@mixin clearfix
+{
+    &::after
+    {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin btn_style
+{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    transform: rotate(0);
+    backface-visibility: hidden;
+
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,97 @@
+.btn
+{
+    &, &:link, &:visited
+    {
+        @include btn_style;
+    }
+
+    &--white
+    {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after
+        {
+            background-color: $color-white;
+        }
+    }
+
+    &--green
+    {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after
+        {
+            background-color: $color-primary;
+        }
+    }
+
+    &--text
+    {
+        &:link, &:visited
+        {
+            font-size: $default-font-size;
+            color: $color-primary;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 0.1rem solid $color-primary;
+            padding: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        &:hover
+        {
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+            transform: translateY(-0.3rem);
+            border-radius: 1rem;
+        }
+
+        &:active
+        {
+            box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+            transform: translateY(-0.1rem);
+        }
+    }
+
+    &--animated
+    {
+        animation: fadeInBottom 0.5s 0.5s ease-out backwards;
+    }
+
+    &:hover
+    {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active, &:focus
+    {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+    }
+
+    &::after
+    {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+        transition: all 0.4s;
+    }
+
+    &:hover::after
+    {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
