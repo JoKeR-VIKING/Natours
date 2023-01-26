@@ -10,10 +10,31 @@
 html
 {
     font-size: 62.5%;
+
+    @include respond(tab_land)
+    {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab_potr)
+    {
+        font-size: 50%;
+    }
+
+    @include respond(desktop)
+    {
+        font-size: 75%;
+    }
+
     scroll-behavior: smooth;
 }
 
 body
 {
     padding: 3rem;
+
+    @include respond(tab_potr)
+    {
+        padding: 0;
+    }
 }
