@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -536,6 +537,9 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 7;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
 }
 .popup__content {
   width: 80%;
@@ -544,14 +548,23 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.5);
   border-radius: 3px;
   display: table;
   overflow: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  transform: translate(-50%, -50%) scale(1);
 }
 .popup__left {
   width: 33.33%;
   display: table-cell;
+  vertical-align: middle;
 }
 .popup__right {
   width: 66.66%;
@@ -560,7 +573,7 @@ body {
   padding: 3rem 5rem;
 }
 .popup__image {
-  width: 100%;
+  width: 99%;
   display: block;
 }
 .popup__paragraph {
@@ -568,6 +581,19 @@ body {
   column-count: 2;
   column-gap: 4rem;
   column-rule: 1px solid #eee;
+  hyphens: auto;
+}
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  text-decoration: none;
+  position: absolute;
+  right: 5rem;
+  font-size: 3rem;
+  display: inline-block;
+  line-height: 1;
+}
+.popup__close:hover, .popup__close:active {
+  color: #55c57a;
 }
 
 .row {
