@@ -11,9 +11,19 @@
 .u-margin-bottom-4
 {
     margin-bottom: 4rem;
+
+    @include respond(tab_port)
+    {
+        margin-bottom: 3rem;
+    }
 }
 
 .u-margin-bottom-8
 {
     margin-bottom: 8rem;
+
+    @include respond(tab_port)
+    {
+        margin-bottom: 5rem;
+    }
 }

@@ -3,6 +3,11 @@
     background-color: $color-grey-light;
     padding: 25rem 0;
     margin-top: -25vh;
+
+    @include respond(tab_port)
+    {
+        padding: 20rem 0;
+    }
 }
 
 .section-features
@@ -13,9 +18,14 @@
     padding: 20rem 0;
     margin-top: -10rem;
 
+    @include respond(tab_port)
+    {
+        padding: 10rem 0;
+    }
+
     & > *
     {
-        transform: skewY(7deg);
+        transform: skewY(6deg);
     }
 }
 
@@ -24,18 +34,33 @@
     background-color: $color-grey-light;
     padding: 25rem 0 15rem 0;
     margin-top: -8rem;
+
+    @include respond(tab_port)
+    {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-stories
 {
     padding: 25rem 0 15rem 0;
     position: relative;
+
+    @include respond(tab_port)
+    {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-booking
 {
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     padding: 25rem 0 15rem 0;
+
+    @include respond(tab_port)
+    {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .book

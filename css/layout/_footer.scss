@@ -5,10 +5,20 @@
     font-size: 1.4rem;
     color: #eee;
 
+    @include respond(tab_port)
+    {
+        padding: 8rem 0;
+    }
+
     &__logobox
     {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab_port)
+        {
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo
@@ -22,6 +32,12 @@
         border-top: 1px solid #999;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tab_port)
+        {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list
@@ -64,5 +80,12 @@
         border-top: 1px solid #999;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tab_port)
+        {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 }
