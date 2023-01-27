@@ -172,13 +172,16 @@
     .card
     {
         height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
         &__side
         {
             height: auto;
             transition: all 1s ease;
             position: relative;
-            border-radius: 3px;
+            box-shadow: none;
 
             &-front
             {
@@ -191,6 +194,7 @@
                 background-color: green;
                 transform: rotateY(0);
                 z-index: 1;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 
                 &-1
                 {
@@ -209,6 +213,11 @@
             }
         }
 
+        &__details
+        {
+            padding: 1rem 3rem;
+        }
+
         &__cta
         {
             position: relative;
@@ -217,6 +226,7 @@
             transform: translate(0);
             width: 100%;
             text-align: center;
+            padding: 7rem 4rem;
         }
 
         &__price-box
@@ -234,7 +244,7 @@
 
         &__price-value
         {
-            font-size: 6rem;
+            font-size: 4rem;
         }
 
         &:hover &__side-front

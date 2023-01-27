@@ -44,6 +44,11 @@
         width: 33.33%;
         display: table-cell;
         vertical-align: middle;
+
+        @include respond(tab_port)
+        {
+            width: 0;
+        }
     }
 
     &__right
@@ -52,12 +57,27 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab_port)
+        {
+            width: 100%;
+        }
+
+        @include respond(phone)
+        {
+            padding: 1rem;
+        }
     }
 
     &__image
     {
         width: 99%;
         display: block;
+
+        @include respond(tab_port)
+        {
+            width: 0;
+        }
     }
 
     &__paragraph
@@ -67,6 +87,11 @@
         column-gap: 4rem;
         column-rule: 1px solid #eee;
         hyphens: auto;
+
+        @include respond(phone)
+        {
+            font-size: 1.2rem;
+        }
     }
 
     &__close
@@ -80,6 +105,11 @@
             font-size: 3rem;
             display: inline-block;
             line-height: 1;
+
+            @include respond(phone)
+            {
+                right: 2rem;
+            }
         }
 
         &:hover, &:active
