@@ -1033,6 +1033,7 @@ body {
   left: 0;
   z-index: 5;
   opacity: 0;
+  visibility: hidden;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .navigation__list {
@@ -1102,6 +1103,7 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
   opacity: 1;
+  visibility: visible;
 }
 .navigation__checkbox:checked ~ .navigation__label .navigation__icon::before {
   top: 0;
